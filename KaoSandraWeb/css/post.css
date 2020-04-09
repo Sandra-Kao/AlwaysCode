@@ -80,3 +80,8 @@
 #post .tagResult .section h3 {
     margin: 16px 0px 8px 0px;
 }
+
+#post .about .vertical-center {
+    position: absolute;
+    top: 25%;
+}
