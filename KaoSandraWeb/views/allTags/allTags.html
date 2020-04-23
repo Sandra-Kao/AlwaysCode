@@ -55,12 +55,8 @@
                         <div class="tagList">
                             <h2>標籤列表</h2>
                             <ul>
-                                <li>
-                                    <a href="../../views\allTags\tag-SandraDIY.html">[珊卓DIY] 製作網站</a>
-                                </li>
-
-                                <li>
-                                    <a href="javescript:void(0)">Microsoft Office</a>
+                                <li v-for="tag in allTags">
+                                    <a :href="tag.tagDestination">{{tag.tagName}}</a>
                                 </li>
                             </ul>
                         </div>
@@ -72,6 +68,12 @@
 
         <div id="footer-wrapper" class=""></div>
     </div>
+
+    <!-- custom page js -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="/KaoSandraWeb/js/api.js"></script>
+    <script type="text/javascript" src="/KaoSandraWeb/js/main.js"></script>
 </body>
 
 </html>
