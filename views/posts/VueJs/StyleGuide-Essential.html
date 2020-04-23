@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta name="description" content="前端開發心得、筆記和觀察都藏在我的小本子裡~ | Front-End Development">
+    <meta name="keywords" content="HTML,CSS,Front-End,JavaScript">
+    <meta name="author" content="Kao Sandra">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=1">
+    <meta name="copyright" content="&copy; Copyright - Kao Sandra. All rights reserved.">
+    <title>珊卓前端開發小冊子</title>
+
+    <!-- Outside resource -->
+    <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+            type="text/javascript"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <!-- Reference resource -->
+    <link type="text/css" rel="stylesheet" href="/KaoSandraWeb/css/font-awesome_5.12.1/font-awesome/all.min.css">
+    <link type="text/css" rel="stylesheet" href="/KaoSandraWeb/css/font-awesome_5.12.1/font-awesome/regular.min.css">
+    <link type="text/css" rel="stylesheet" href="/KaoSandraWeb/css/Highlight-js/darcula.css">
+    <!-- layout resource -->
+    <link type="text/css" rel="stylesheet" href="/KaoSandraWeb/css/default.css">
+    <link type="text/css" rel="stylesheet" href="/KaoSandraWeb/css/header-footer.css">
+    <link type="text/css" rel="stylesheet" href="/KaoSandraWeb/css/side-container.css">
+    <link type="text/css" rel="stylesheet" href="/KaoSandraWeb/css/code.css">
+    <script>
+        $(function () {
+            $("#header-wrapper").load("http://127.0.0.1:5500/views/common/_Header.html");
+            $("#footer-wrapper").load("http://127.0.0.1:5500/views/common/_Footer.html");
+            $("#side-container").load("http://127.0.0.1:5500/views/common/_SideContainer.html");
+        });
+    </script>
+
+
+    <!-- custom page css -->
+    <link type="text/css" rel="stylesheet" href="/KaoSandraWeb/css/post.css">
+    <!-- <script type="text/javascript" src="/KaoSandraWeb/js/highlight-js/highlight.pack.js"></script> -->
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+
+<body>
+    <div id="container">
+        <div id="header-wrapper" class="bs-docs-header"></div>
+
+        <div id="main-wrapper" class="container">
+            <div class="row">
+                <div id="KScontainer" class="col-md-9">
+                    <div id="post">
+                        <div class="row">
+                            <p class="col-md-8 ">
+                                <span><i class="far fa-calendar-alt"></i> 2020 04.14 </span>
+                                <span><i class="fas fa-keyboard"></i>作者:高Sandra</span>
+                            </p>
+                            <p class="col-md-4 text-right">
+                                <span><i class="fas fa-tag"></i>Vue.js</span>
+                            </p>
+                        </div>
+                        <div class="post-content">
+                            <h2>Vue官方建議的程式碼編寫風格</h2>
+                            <div class="section">
+                                <p>使用Vue.js一陣子之後，發現需要命名很多不同功能或種類但名稱又大同小異的變數名稱。</p>
+                                <p>在逛Vue.js教學或是求救文的時候總是會看到一些每個設計師獨有的寫code習慣和命名規則，
+                                    這引發了我思考是否能有一套能遵循的指南或建議來編寫程式碼，也方便自己閱讀老舊的code。
+                                </p>
+                                <span class="light">(絕對不是因為我每次想變數名子都想很久的關係 >///<) </span>
+                            </div>
+                            <div class="section">
+                                <h3>官方建議風格</h3>
+                                <p>參考資料：
+                                    <a href="https://vuejs.org/v2/style-guide/" target="_blank">Vus.js Style Guide</a>
+                                </p>
+                                <p>Vue官方將 Style Guide 分為4個建議等級，由<mark>強</mark>(高優先)到<mark>弱</mark>(小心使用)分別是</p>
+                                <p>
+                                    <ol>
+                                        <li><mark>Essential (必要的)</mark></li>
+                                        <li>Strongly Recommended (強烈推薦)</li>
+                                        <li>Recommended (建議使用)</li>
+                                        <li>Use with Caution (小心使用)</li>
+                                    </ol>
+                                </p>
+                                <p>本篇紀錄一下 Essential 部分~</p>
+                            </div>
+                            <div class="section">
+                                <h3>Essential Vue coding Style</h3>
+                                <p>在 Essential 分類中的內容都是官方推薦為了<mark>避免</mark>程式錯誤或建置失敗等的重要<mark>預防措施</mark>。</p>
+                                <p>這些項目值得花一些精力學習並熟用，儘管還是會出現非常少數的例外狀況，但這通常只會發生在非常精通的 Vue and JavaScript 專家使用者身上。</p>
+                            </div>
+                            <div class="section">
+                                <h3>Component命名</h3>
+                                <p>使用 Component 時為了不跟HTML語言的系統字衝突，應<mark>避免</mark>命名Component為1個英文字，例如：&lt;post&gt; or
+                                    &lt;cardList&gt;</p>
+                                <p>可改採用<mark>-</mark>銜接，例如： <mark>&lt;card-list&gt;</mark> 。</p>
+                                <p>但Vue 原生的系統字 root <mark>App</mark> components 或 <mark>&lt;transition&gt;</mark> 或
+                                    <mark>&lt;component&gt;</mark>不限於此。</p>
+                                <P>推薦範例：</P>
+                                <pre><code>
+        Vue.component( &#39;todo-item&#39; , {
+            // ...
+        })
+                                </code></pre>
+                            </div>
+
+                            <div class="section">
+                                <h3>Component中的data</h3>
+                                <p>data 屬性在 Component 中必須是一個 function ，唯一例外是在root instance (main.js) 中的 <mark> new
+                                        Vue</mark> ，因為只有一個 root Vue instance 。</P>
+                                <p>如果 data 屬性是一個 Object ( <mark>date:{ }</mark> )，它會讓在 component 中的所有 instances 都共用同個
+                                    data object 中的資料。這會導致使用 component 在不同地方時，卻出現一樣的內容。
+                                    例如：list-component 可以重複共用在 pricing-list / todo-list / food-list，其內容不一樣
+                                    且每個 list 都共用同一個 component 中的 data:{ } ，這會導致就算只變更一個 list data ，但所有 list 都會同時 新增 / 修改
+                                    / 刪除。</p>
+                                <p>為了實現每個 component 都能有自己獨立的 data ，我們用 JavaScript function return 一個 Object 實作這個功能。 </p>
+                                <pre><code>
+        data: function () {
+            return {
+                listTitle: &#39;&#39;,
+                todos: []
+            }
+        }
+                                </code></pre>
+                                <P>推薦範例：</P>
+                                <pre><code>
+        Vue.component(&#39;some-comp&#39;, {
+            data: function () {
+                return {
+                foo: &#39;bar&#39;
+                }
+            }
+        })        
+                                </code></pre>
+                                <pre><code>                                    
+        // In a .vue file
+
+        export default {
+            data () {
+                return {
+                foo: &#39;bar&#39;
+                }
+            }
+        }
+                                </code></pre>
+                                <pre><code>
+        // It&#39;s OK to use an object directly in a root
+        // Vue instance, since only a single instance
+        // will ever exist.
+
+        new Vue({
+            data: {
+                foo: &#39;bar&#39;
+            }
+        })
+                                </code></pre>
+                                <p class="note">我在實作時後發現，在component中如果使用 data object 而非 data function 的話會提是失敗。</p>
+                            </div>
+
+                            <div class="section">
+                                <h3>Component中的prop定義</h3>
+                                <p>Prop的定義應該要盡可能的<mark>詳細</mark>和<mark>清楚</mark>。</p>
+                                <p>在定案提交的程式碼上Prop的定義應該要至少能詳細定義特定資料型態。
+                                    這有兩項優點：
+                                    <ul>
+                                        <li>Component 的 API 文件上較能清楚的看出 Component 的意義和使用方式。</li>
+                                        <li>在開發環境中如果使用不對的 prop 格式 Vue.js 會在 Dev Tool console 發出警告提示，協助開發偵錯。 </li>
+                                    </ul>
+                                </p>
+                                <pre><code>
+        props: {
+            status: String
+        }
+                            </code></pre>
+                                <pre><code>
+        // Even better!
+        props: {
+            status: {
+                type: String,
+                required: true,
+                validator: function (value) {
+                    return [                   //定義不同的資料型態
+                        &#39;syncing&#39;,
+                        &#39;synced&#39;,
+                        &#39;version-conflict&#39;,
+                        &#39;error&#39;
+                    ].indexOf(value) !== -1
+                }
+            }
+        }
+                            </code></pre>
+                            </div>
+
+                            <div class="section">
+                                <h3>v-for中的Key</h3>
+                                <p>在v-for中應該永遠搭配 <mark>key</mark>(鍵值)使用。</p>
+                                <p>v-for with key 能：
+                                    <ul>
+                                        <li>維持在 Component 中保持 tree 結構的狀態</li>
+                                        <li>只渲染需要更新的元素，而不刪除需保留在 DOM 上的元素</li>
+                                        <li>讓迴圈中的元素在 DOM 渲染上，在可預測的狀態下進行 two-way binding 維護 (在前端使用 Vue.js
+                                            的優點之一，能有效節約網頁效能。)</li>
+                                        <li>針對元素 &lt;input&gt; 可同時渲染更新內容和保持元素 <mark>focus</mark></li>
+                                        <li>使用 &lt;transition-group&gt; 等 Vue build-in (內建) 動畫功能時能順利進行</li>
+                                        <li>添加 <mark>:key=&quot;todo.id&quot;</mark> 使 Vue 更容易判斷 DOM 上的渲染行為，減少團隊維護或開發工作
+                                        </li>
+                                    </ul>
+                                </p>
+                                <P>推薦範例：</P>
+                                <pre><code>
+        &lt;ul&gt;
+            &lt;li
+                v-for=&quot;todo in todos&quot;
+                :key=&quot;todo.id&quot;
+                &gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+                                </code></pre>
+                            </div>
+                            <div class="section">
+                                <h3>避免同時使用 v-if and v-for</h3>
+                                <p>同個元素上不應同時使用 v-if and v-for。</p>
+                                <p>幾個常見的使用錯誤如：
+                                    <ul>
+                                        <li>需要過濾迴圈的某部分資料，<br />
+                                            <mark>v-for=&quot;user in users&quot; v-if=&quot;user.isActive&quot;</mark>
+                                            <p class="note">應將資料來源另外指定給篩選過的新物件，並用新物件做迴圈。</p>
+                                        </li>
+                                        <li>不想讓 DOM 渲染該迴圈，<br />
+                                            <mark>v-for=&quot;user in users&quot;
+                                                v-if=&quot;shouldShowUsers&quot;</mark>
+                                            <p class="note">指定 v-if=&quot;shouldShowUsers&quot; 在其他外層的元素上。</p>
+                                        </li>
+                                    </ul>
+                                </p>
+                                <p>Vue在元素同時遇到 v-for 和 v-if 時，v-for 具有更高的優先級。
+                                    兩個指令同時在一個元素上不會造成程式碼掛掉，只是會(重複工作)導致效能極差。
+                                    因為 DOM 會渲染整個迴圈之後，再判斷是否要在葉面上顯示。
+                                </p>
+                                <P>推薦範例：</P>
+                                <pre><code>
+        &lt;ul v-if=&quot;shouldShowUsers&quot;&gt;
+            &lt;li
+                v-for=&quot;user in users&quot;
+                :key=&quot;user.id&quot;
+            &gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+                                </code></pre>
+                            </div>
+                            <div class="section">
+                                <h3>為 Component 樣式設置 scoping</h3>
+                                <p>專案的樣式在 App Component 和 layout Component (像 header footer) 可以設定為全局，但其他 Component 應該要設定 scoping (作用域)。</p>
+                                <p>針對單一 Component 樣式，可以使用 scoped或使用 CSS 針對元素的 <mark>class</mark>  設定，而使用後者 class 設定較優，較不容易造成衝突且容易透過class名稱來識別樣式效果。</p>
+                                
+                                <pre><code>
+        &lt;template&gt;
+            &lt;button :class=&quot;[$style.button, $style.buttonClose]&quot;&gt;X&lt;/button&gt;
+        &lt;/template&gt;
+        
+        &lt;!-- 使用 CSS Modules --&gt;
+        &lt;style module&gt;
+        .button {
+            border: none;
+            border-radius: 2px;
+        }
+        
+        .buttonClose {
+            background-color: red;
+        }
+        &lt;/style&gt;    
+                                </code></pre>
+                            </div>
+                            <div class="section">
+                                <h3>Private 屬性名稱</h3>
+                                <p>使用 module scope 保持不允許外部訪問的函數的 Private (私有性)。</p>
+                                <p>
+                                    請始終為 plugin 和 mixin 等 <mark>不考慮</mark> 對外公共 API 的自定義 Private 屬性使用<mark> $_ </mark>前綴。
+                                    並附帶一個命名空間以避免和其它作者的衝突 (比如$_yourPluginName_)。
+                                </p>
+                                <P>推薦範例：</P>
+                                <pre><code>
+        // 好範例
+        var myGreatMixin = {
+            // ...
+            methods: {
+              $_myGreatMixin_update: function () {
+                // ...
+              }
+            }
+          }
+                                </code></pre>
+                                <pre><code>
+        // 甚至更好！
+        var myGreatMixin = {
+          // ...
+          methods: {
+            publicMethod() {
+              // ...
+              myPrivateFunction()
+            }
+          }
+        }
+
+        function myPrivateFunction() {
+          // ...
+        }
+
+        export default myGreatMixin
+                                </code></pre>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div id="side-container" class="col-md-3"></div>
+            </div>
+        </div>
+
+        <div id="footer-wrapper" class=""></div>
+    </div>
+
+    <!-- custom page js -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="/KaoSandraWeb/js/api.js"></script>
+    <script type="text/javascript" src="/KaoSandraWeb/js/main.js"></script>
+</body>
+
+</html>
