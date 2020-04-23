@@ -1,3 +1,4 @@
+<<<<<<< HEAD:KaoSandraWeb/views/posts/webDIY/00-Begining.html
 <!DOCTYPE html>
 <html lang="zh-TW">
 
@@ -148,3 +149,155 @@
 
 
 
+=======
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta name="description" content="前端開發心得、筆記和觀察都藏在我的小本子裡~ | Front-End Development">
+    <meta name="keywords" content="HTML,CSS,Front-End,JavaScript">
+    <meta name="author" content="Kao Sandra">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=1">
+    <meta name="copyright" content="&copy; Copyright - Kao Sandra. All rights reserved.">
+    <title>珊卓前端開發小冊子</title>
+
+    <!-- Outside resource -->
+    <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+            type="text/javascript"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <!-- Reference resource -->
+    <link type="text/css" rel="stylesheet" href="/KaoSandraWeb/css/font-awesome_5.12.1/font-awesome/all.min.css">
+    <link type="text/css" rel="stylesheet" href="/KaoSandraWeb/css/font-awesome_5.12.1/font-awesome/regular.min.css">
+    <link type="text/css" rel="stylesheet" href="/KaoSandraWeb/css/Highlight-js/darcula.css">
+    <!-- layout resource -->
+    <link type="text/css" rel="stylesheet" href="/KaoSandraWeb/css/default.css">
+    <link type="text/css" rel="stylesheet" href="/KaoSandraWeb/css/header-footer.css">
+    <link type="text/css" rel="stylesheet" href="/KaoSandraWeb/css/side-container.css">
+    <link type="text/css" rel="stylesheet" href="/KaoSandraWeb/css/code.css">
+    <script>
+        $(function () {
+            $("#header-wrapper").load("http://127.0.0.1:5500/views/common/_Header.html");
+            $("#footer-wrapper").load("http://127.0.0.1:5500/views/common/_Footer.html");
+            $("#side-container").load("http://127.0.0.1:5500/views/common/_SideContainer.html");
+        });
+    </script>
+
+
+    <!-- custom page css -->
+    <link type="text/css" rel="stylesheet" href="/KaoSandraWeb/css/post.css">
+    <!-- <script type="text/javascript" src="/KaoSandraWeb/js/highlight-js/highlight.pack.js"></script> -->
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+<body>
+    <div id="container">
+        <div id="header-wrapper" class="bs-docs-header"></div>
+
+        <div id="main-wrapper" class="container">
+            <div class="row">
+                <div id="KScontainer" class="col-md-9">
+                    <div id="post">
+                        <div class="row">
+                            <p class="col-md-8 ">
+                                <span><i class="far fa-calendar-alt"></i> 2020 03.12 </span>
+                                <span><i class="fas fa-keyboard"></i>作者:高Sandra</span>
+                            </p>
+                            <p class="col-md-4 text-right">
+                                <span><i class="fas fa-tag"></i>[珊卓DIY] 製作網站</span>
+                            </p>
+                        </div>
+                        <div class="post-content">
+                            <div>
+                                <h2>00 初衷</h2>
+                                <div class="section">
+                                    <h3>為什麼開始動手做自己的網站?</h3>
+                                    <p>
+                                        脫離學校不久後，進入了資訊業當工程師。<br />
+                                        接觸了業界才知道自己是多麼的不足，世界是這麼的大。<br />
+                                        於是想實作點甚麼，一邊當閒暇興趣，一邊充實自己的實力。
+                                    </p>
+                                </div>
+                                <div class="section">
+                                    <h3>為什麼選擇做網站?</h3>
+                                    <p>
+                                        學生時代擅長開發手機APP，但在職場工作上是負責開發網站。
+                                        開始前思考了很久實作的主題跟方向，
+                                        到底是要開發"需要拔插裝置能在自己手機上用甚至上架stor的App"，
+                                        還是要開發"只要有電腦就能隨時隨地投入實作的網站"？
+                                    </p>
+                                    <p>
+                                        我花了點時間稍微比較了一下兩者優劣。
+                                        <table style="border-collapse: collapse; border: 1px solid black; width: 100%;">
+                                            <tbody>
+                                                <tr sty="">
+                                                    <th style="border: 1px solid black; padding: 5px; width: 5%;"></th>
+                                                    <th style="border: 1px solid black; padding: 5px; width: 25%;">優點
+                                                    </th>
+                                                    <th style="border: 1px solid black; padding: 5px; width: 25%;">缺點
+                                                    </th>
+                                                    <th style="border: 1px solid black; padding: 5px; width: 25%;">平台
+                                                    </th>
+                                                </tr>
+                                                <tr>
+                                                    <td style="border: 1px solid black; padding: 5px;"><b>App</b></td>
+                                                    <td style="border: 1px solid black; padding: 5px;">
+                                                        能製作較多不同面向的小程式，可以是遊戲或是工具，成品方便分享。</td>
+                                                    <td style="border: 1px solid black; padding: 5px;">開發方便性低。</td>
+                                                    <td style="border: 1px solid black; padding: 5px;">
+                                                        嘗試上架store，公開下載滿足成就感。
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="border: 1px solid black; padding: 5px;"><b>Web Site</b>
+                                                    </td>
+                                                    <td style="border: 1px solid black; padding: 5px;">
+                                                        輕量級IDE搭配任何一台電腦就能撰寫程式語言，隨時隨地享受自由開發的樂趣，還能搭配工作中技能活用實作。
+                                                    </td>
+                                                    <td style="border: 1px solid black; padding: 5px;">
+                                                        開發的方向較無趣，大多是圖文性質網站。
+                                                    </td>
+                                                    <td style="border: 1px solid black; padding: 5px;">
+                                                        玩玩架伺服器、購買網域、UI/UX和經營SEO等。
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </p>
+                                    <p>考量可行性跟自身環境後，決定以"方便"、"好入門"為主，所以決定開發網站。</p>
+                                    <h3>決定好了要做網站之後....?</h3>
+                                    <p>我又針對網路上的網站做調查，尋找主題跟方向。這時候已經一兩個月過去了，才發現過這麼就一直沒練到重點，我都還只停在前置作業!!!!!</p>
+                                    <p>這樣不行、效率太低了...等等的句子一直從腦海中冒出。所以我找了一個網站，排版我看得順眼、經營模式我可以接受，決心要參考模仿並開始實作。</p>
+                                    <p>俗話說的好：『做了才知道喜不喜歡，先衝在說！』，創業部都這樣嗎?有了一個點子之後，先衝在說！</p>
+                                    <P>事實上我已經換了3個題目了XD，到目前還算滿意。</P>
+                                    <p>希望能給跟我有一樣想法的人參考。</p>
+                                </div>
+                                <p class="note">某J主管：『不需要準備到100%；先開始做，在把事情做好，接著多做好事！』</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="side-container" class="col-md-3"></div>
+            </div>
+        </div>
+
+        <div id="footer-wrapper" class=""></div>
+    </div>
+
+    <!-- custom page js -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="/KaoSandraWeb/js/api.js"></script>
+    <script type="text/javascript" src="/KaoSandraWeb/js/main.js"></script>
+</body>
+
+</html>
+
+
+
+>>>>>>> master:views/posts/webDIY/00-Begining.html
