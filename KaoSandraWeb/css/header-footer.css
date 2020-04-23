@@ -1,0 +1,113 @@
+.bs-docs-header h1 {
+    margin-bottom: 10px;
+    font-size: 40px;
+}
+
+.bs-docs-header p {
+    margin-bottom: 0;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.4;
+}
+
+.bs-docs-header .container {
+    position: relative;
+}
+
+@media (min-width: 768px) {
+    .bs-docs-header {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        font-size: 24px;
+        text-align: left;
+    }
+
+    .bs-docs-header h1 {
+        font-size: 60px;
+        line-height: 1;
+    }
+}
+
+/*----------------------------------------
+Dropdown Menu inside a Navigation Bar
+----------------------------------------*/
+
+#header-menu {
+    background-color: #75003b;
+}
+
+#header-menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#header-menu li {
+    float: left;
+}
+
+#header-menu li a,
+.dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+#header-menu li a:hover,
+.dropdown:hover .dropbtn {
+    /* background-color: red; */
+    text-decoration: underline;
+}
+
+#header-menu li:nth-of-type(1) a:nth-of-type(1){
+    padding-left: 0px;
+}
+
+#header-menu li.dropdown {
+    display: inline-block;
+    position: static !important;
+}
+
+#header-menu .dropdown:hover .dropdown-content {
+    display: block;
+    position: absolute;
+    background-color: #fffafa;
+    top: 32px;
+    min-width: 8%;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+#header-menu .dropdown-content {
+    display: none;
+}
+
+#header-menu .dropdown-content h5 {
+    margin: 0px 0px 2px 0px;
+    font-size: 80%;
+    text-align: -webkit-center;
+        color: #6a7177;
+    border-color: #FFAC55;
+    border-bottom-style: dashed;
+    border-bottom-width: 1px;
+}
+
+#header-menu .dropdown-content a {
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+#header-menu .dropdown-content a:hover {
+    background-color: #fce9e9;
+}
+
+
+#header-menu .dropdown-content .menu-tags{
+    padding: 8px 8px 8px 8px;
+}
