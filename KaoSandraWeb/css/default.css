@@ -22,12 +22,12 @@ a:link {
 }
 
 a:hover {
-    color: #004280;
+    /* color: #004280; */
+    text-decoration: underline;
 }
 
 a:visited {
-    color: #2196f3;
-    text-decoration: none;
+    color: #609;
 }
 
 h1 {
@@ -57,9 +57,10 @@ ul {
 
 h5,
 p,
+span,
 li {
     font-size: 14px;
-    line-height: 1.2em;
+    line-height: 20px;
 }
 
 br {

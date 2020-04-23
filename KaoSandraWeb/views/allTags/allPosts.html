@@ -43,7 +43,6 @@
 
 </head>
 
-
 <body>
     <div id="container">
         <div id="header-wrapper" class="bs-docs-header"></div>
@@ -52,27 +51,23 @@
             <div class="row">
                 <div id="KScontainer" class="col-md-9">
                     <div id="post">
-                        <div class="row">
-                            <p class="col-md-8 ">
-                                <span><i class="far fa-calendar-alt"></i> 2020 03.31 </span>
-                                <span><i class="fas fa-keyboard"></i>作者:高Sandra</span>
-                            </p>
-                            <p class="col-md-4 text-right">
-                                <span><i class="fas fa-tag"></i>Microsoft Office</span>
-                            </p>
-                        </div>
-                        <div class="post-content">
-                            <h2>Excel因使用了巨集，導致PERSONAL.XLSB 檔案使用中，無法開啟Excel活頁簿?</h2>
-                            <div class="section">
-                                <h3>[Why?]起因：</h3>
-                                <p>因為工作需要重複執行一樣的動作輸出Excel表，所以初試Ecxel的巨集功能，一試之下雖因不熟而錄製了很多遍，但這功能對於重複動作來說果然好用！</p>
-                                <p>在使用巨集功能時需要選擇巨集指令瑪儲存的地點 ———— 個人巨集活頁簿 / 新的活頁簿 / 現用活頁簿。</p>
-                                <p>只要選擇過個人巨集活頁簿，皆會導致你在開啟Excel時自動開啟PERSONAL.XLSB巨集程式，所以每次都會跳檔案使用中通知視窗。</p>
+                        <div class="tagResult">
+                            <h2>All Posts</h2>
+
+                            <div v-for="post in allPosts"
+                            class="section">
+                                <h3>
+                                    <a :href="post.postDestination">
+                                        {{post.postTitle}}
+                                    </a>
+                                </h3>
+                                <p>{{post.postPreview}}</p>
+                                <div class="row">
+                                    <p class="col-md-8 ">{{post.postDate}}</p>
+                                    <p class="col-md-4 text-right"><i class="fas fa-tag"></i>{{post.postViewsCount}}</p>
+                                </div>
                             </div>
-                            <div class="section">
-                                <h3>[How?]問題排解：</h3>
-                                <p>開啟資料夾 C:\Documents and Settings\使用者帳號\Application Data\Microsoft\Excel\XLSTART後，將之刪除即可。</p>
-                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -82,6 +77,7 @@
 
         <div id="footer-wrapper" class=""></div>
     </div>
+
 
     <!-- custom page js -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
