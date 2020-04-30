@@ -21,7 +21,8 @@ var vm = new Vue({
 
             tags: [{
                 tagID: 0,
-                tagName: ''
+                tagName: '',
+                tagDestination: ''
             }],
 
             postsTagsRelationship: [{
@@ -31,14 +32,14 @@ var vm = new Vue({
         },
         allPosts: {},
         allTags: {},
-        postTag: {}
+        allPostTag: {}
     },
     beforeMount() {
         apiGetTagPostJson().then(function (res) {
             vm.tagPostRelationship = res.data;
             vm.allPosts = res.data.posts;
             vm.allTags = res.data.tags;
-            vm.postTag = res.data.postsTagsRelationship;
+            vm.allPostTag = res.data.postsTagsRelationship;
         }).catch(function (error) {
             console.log(error);
         });
@@ -46,5 +47,8 @@ var vm = new Vue({
     computed: {},
     watch: {},
     methods: {
+        mergedAllPostTag: function () {
+            return $.extend(true, vm.allPosts, vm.allTags, vm.allPostTag);
+        }
     }
 });
