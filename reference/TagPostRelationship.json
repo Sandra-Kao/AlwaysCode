@@ -7,62 +7,70 @@
         "postPreview": "為什麼開始動手做自己的網站?",
         "postDate": "2020 03.12 ",
         "postDestination": "/KaoSandraWeb/Views/posts/webDIY/00-Begining.html",
-        "postViewsCount": ""
+        "postViewsCount": "",
+        "tags": []
     }, {
         "postID": 1,
         "postTitle": "VSCode setup",
         "postPreview": "Before We Start...",
         "postDate": "2020 03.03",
         "postDestination": "/KaoSandraWeb/Views/posts/webDIY/01-VSCodeSetup.html",
-        "postViewsCount": ""
+        "postViewsCount": "",
+        "tags": []
     }, {
         "postID": 2,
         "postTitle": "設計一份 HTML",
         "postPreview": "一個網頁不必不可少的元素----HTML(HyperText Markup Language)絕對是建置網站的基礎。",
         "postDate": "2020 03.12",
         "postDestination": "/KaoSandraWeb/Views/posts/webDIY/02-CreateHTML.html",
-        "postViewsCount": ""
+        "postViewsCount": "",
+        "tags": []
     }, {
         "postID": 3,
         "postTitle": "Html Document Structure",
         "postPreview": "接續著上篇 設計一份HTML ，我們接著來談我配置的HTML docutment structure是怎麼配置的？以及為什麼這樣配置？",
         "postDate": "2020 04.09 ",
         "postDestination": "/KaoSandraWeb/Views/posts/webDIY/03-HtmlSructure.html",
-        "postViewsCount": ""
+        "postViewsCount": "",
+        "tags": []
     }, {
         "postID": 4,
         "postTitle": "全站如何靠jQuery共用Header/Footer",
         "postPreview": "如果網站有很多頁都重複用到某段HTML程式碼，想要將其修改的時候又不想每頁都改，那該怎麼辦呢?",
         "postDate": "2020 04.10 ",
         "postDestination": "/KaoSandraWeb/Views/posts/webDIY/04-CommonHTMLcode.html",
-        "postViewsCount": ""
+        "postViewsCount": "",
+        "tags": []
     }, {
         "postID": 5,
         "postTitle": "Excel提示PERSONAL.XLSB檔案使用中，無法開啟活頁簿?",
         "postPreview": "因為工作需要重複執行一樣的動作輸出Excel表，所以初試Ecxel的巨集功能",
         "postDate": "2020 03.31",
         "postDestination": "/KaoSandraWeb/Views/posts/MicrosoftOffice/Office2010.html",
-        "postViewsCount": ""
+        "postViewsCount": "",
+        "tags": []
     }, {
         "postID": 6,
         "postTitle": "Vue官方建議的程式碼編寫風格",
         "postPreview": "使用Vue.js一陣子之後，發現需要命名很多不同功能或種類但名稱又大同小異的變數名稱",
         "postDate": "2020 04.14",
         "postDestination": "/KaoSandraWeb/views/posts/VueJs/StyleGuide-Essential.html",
-        "postViewsCount": ""
+        "postViewsCount": "",
+        "tags": []
     }, {
         "postID": 7,
         "postTitle": "用 HTML 和 CSS 製作 select Box 的 Pleceholder",
         "postPreview": "&lt;input&gt;和&lt;textarea&gt;等HTML元素都天生自帶 placeholder 功能，唯獨 &lt;select&gt; 下拉選單在UI上想設定類placeholder功能會相對麻煩。",
         "postDate": "2020 04.22",
         "postDestination": "/KaoSandraWeb/views/posts/HtmlAndCss/SelectBoxPlaceHolder.html",
-        "postViewsCount": ""
+        "postViewsCount": "",
+        "tags": []
     }],
 
     "tags": [{
         "tagID": 0,
-        "tagName": "All Posts",
-        "tagDestination": "/KaoSandraWeb/views/allTags/allPosts.html"
+        "tagName": "webDIY",
+        "tagDestination": "/KaoSandraWeb/views/allTags/webDIY.html"
     }, {
         "tagID": 1,
         "tagName": "Microsoft Office",
@@ -86,6 +94,9 @@
     }, {
         "postID": 2,
         "tagID": 0
+    }, {
+        "postID": 2,
+        "tagID": 3
     }, {
         "postID": 3,
         "tagID": 0
