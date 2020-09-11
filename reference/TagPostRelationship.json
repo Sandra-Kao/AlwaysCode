@@ -65,6 +65,14 @@
         "postDestination": "/KaoSandraWeb/views/posts/HtmlAndCss/SelectBoxPlaceHolder.html",
         "postViewsCount": "",
         "tags": []
+    }, {
+        "postID": 8,
+        "postTitle": "各種渲染 Vue.js component template 的方式",
+        "postPreview": "",
+        "postDate": "2020 09.09",
+        "postDestination": "/KaoSandraWeb/views/posts/VueJs/CreateComponent.html",
+        "postViewsCount": "",
+        "tags": []
     }],
 
     "tags": [{
@@ -112,6 +120,9 @@
     }, {
         "postID": 7,
         "tagID": 3
+    }, {
+        "postID": 8,
+        "tagID": 2
     }]
 }
 
