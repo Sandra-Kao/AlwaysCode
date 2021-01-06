@@ -6,7 +6,7 @@ I know it's not perfect, BUT...
 
 There are so many tricks I want to do, I wnat to try. SO...
 
-Let's just task out time, step by step and go on easy.
+Let's just take out time, step by step and go on easy.
 
 Please enjoy yourself in my work.
 
