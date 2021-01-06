@@ -1,37 +1,13 @@
-## Welcome to GitHub Pages
+## Welcome to My Blog
 
-You can use the [editor on GitHub](https://github.com/Sandra-Kao/AlwaysCode/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+Here is a blog made by my self with some pure, fun and basic fron-end skills and tools.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+I know it's not perfect, BUT...
 
-### Markdown
+There are so many tricks I want to do, I wnat to try. SO...
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Let's just task out time, step by step and go on easy.
 
-```markdown
-Syntax highlighted code block
+Please enjoy yourself in my work.
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Sandra-Kao/AlwaysCode/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Let's Go! 🔥 <a href="https://alwayscode.live/views/Index.html"> Click Me</a>
